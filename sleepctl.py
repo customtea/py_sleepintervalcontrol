@@ -1,7 +1,7 @@
 import time
 
 __author__ = 'customtea (https://github.com/customtea/)'
-__version__ = '1.0.0'
+__version__ = '1.5.0'
 
 class SleepControl:
     def __init__(self, interval=1):
