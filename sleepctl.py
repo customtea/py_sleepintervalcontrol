@@ -17,7 +17,7 @@ class SleepControl:
         self.sleep_time = 0
         self.init_time = time.time()
 
-    def sleep_deco(self, func):
+    def interval_func(self, func):
         def decorator_wrapper(*args, **kwargs):
             time.sleep(self.sleep_time)
             
@@ -41,7 +41,7 @@ class SleepControl:
         return decorator_wrapper
 
 
-    def interval_func(self, func):
+    def interval_func_nowarn(self, func):
         def decorator_wrapper(*args, **kwargs):
             time.sleep(self.sleep_time)
             
