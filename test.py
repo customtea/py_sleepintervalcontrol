@@ -7,11 +7,11 @@ import datetime
 slp_ctl = SleepControl(interval=3)
 
 # Set Decorator
-@slp_ctl.sleep_deco
+@slp_ctl.interval_func
 def test_function():
     # This Function must be OneShot
     # No Loop
-    s = random() *3
+    s = random() *4
     print(f'{datetime.datetime.now().isoformat()} Sleep {s}s')
     time.sleep(s)
 
