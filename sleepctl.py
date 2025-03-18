@@ -17,6 +17,7 @@ class SleepControl:
         self.sleep_time = 0
         self.init_time = time.time()
 
+    # with Overflow Interval Time Warning Print
     def interval_func(self, func):
         def decorator_wrapper(*args, **kwargs):
             time.sleep(self.sleep_time)
@@ -40,7 +41,7 @@ class SleepControl:
             return r
         return decorator_wrapper
 
-
+    # no warning (MUST Complete Function within sleep interval)
     def interval_func_nowarn(self, func):
         def decorator_wrapper(*args, **kwargs):
             time.sleep(self.sleep_time)
